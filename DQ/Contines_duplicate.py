@@ -1,26 +1,20 @@
+nums = [2,14,18,22,22]
+nums.sort()
+temp=nums[0]
+value=False
+for i in range(1,len(nums)):
+    print(nums[i])
+    print('temp')
+    print(temp)
+    if(nums[i] ==temp):
+        print("now")
+
+        value=True
+    else:
+        temp=nums[i]
+        
 
 
 
-from array import array
-from pytz import country_names
-
-
-nums =[1,2,3,1]
-
-def is_duplicate(nums):
-    arraying=nums.copy()
-    for i in arraying:
-        arraying.remove(i)
-        for j in arraying:
-             if (i==j):
-
-
-                return True
-         
-     
-    
 
     
-            
-    return False
-print(is_duplicate(nums))
