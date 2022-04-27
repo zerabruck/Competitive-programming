@@ -1,22 +1,33 @@
-def original(changed):
-    values=[] 
-    if(len(changed)%2!=0 or len(changed)==0):
-        return []
-    
-    changed.sort()
-    index=-1
-    while(True):
-        if(len(changed)==0):
-            return values
-        if(changed[index]%2!=0):
-            return []
-        number=changed[index]//2
-        changed.pop(-1)
-        if(number in changed):
-            print(changed)
-            values.append(number)
-            changed.remove(number)
-        else:
-            return []
 
-print(original([0,0,4,6,8]))
+changed = [0,0,0,2,2,0]
+length=len(changed)
+result=[]
+changed.sort()
+
+
+if(len(changed)==0 or len(changed)%2!=0):
+    result=[]
+while(True):
+    if(len(changed)==0):
+        break
+    value=changed.pop(0)
+    try:
+        changed.remove(value*2)
+        result.append(value)
+    except:
+        result=[]
+        break
+    # if(value/2 in changed):
+    #     changed.remove(value//2)
+    #     result.append(value//2)
+    # else:
+    #     result=[]
+    #     break
+
+if(len(result)==length//2):
+    result=result
+else:
+    result=[]
+
+
+print(result)
