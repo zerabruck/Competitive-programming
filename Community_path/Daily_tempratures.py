@@ -1,20 +1,23 @@
-temperatures = [30,40,50,60]
-answer=[]
+temperatures = [30,60,90]
+temperatures.reverse()
+decreasing_stack=[]
+answers=[]
+
 for i in range(len(temperatures)):
-    value=0
-    if(i==len(temperatures)-1):
-        answer.append(value)
-        break
-    temp=temperatures[i:]
-    for j in range(len(temp)):
-        if(temperatures[i]<temp[j]):
-            value=j 
-            answer.append(value)
+    while(True):
+        if(len(decreasing_stack)==0):
+            decreasing_stack.append(i)
             break
-        elif(j==len(temp)-1):
-            answer.append(value)
+        elif(temperatures[i]>=temperatures[decreasing_stack[-1]]):
+            decreasing_stack.pop(-1)
+        elif(temperatures[i]<temperatures[decreasing_stack[-1]]):
+            decreasing_stack.append(i)
+            break
+    if(len(decreasing_stack)==1):
+        answers.append(0)
+    else:
+        
+        answers.append(decreasing_stack[-1]-decreasing_stack[-2])
 
-
-
-
-print(answer)
+answers.reverse()
+print(answers)
