@@ -1,6 +1,3 @@
-
-
-
 class MyQueue:
 
     def __init__(self):
@@ -23,4 +20,5 @@ class MyQueue:
         if(len(self.stack)==0):
             return True
         return False
-        
+  
+

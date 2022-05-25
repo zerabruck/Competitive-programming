@@ -1,4 +1,4 @@
-from asyncio import FastChildWatcher
+
 
 
 class MyCircularDeque:
@@ -49,8 +49,7 @@ class MyCircularDeque:
         if(len(self.qeue)!=0):
             return self.qeue[-1]
         return -1
-        
-        
+     
 
     def isEmpty(self) -> bool:
         if(len(self.qeue)==0):

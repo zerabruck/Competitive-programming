@@ -1,24 +1,26 @@
-s = "(]"
-values=True
-stack=[]
-reference={"(":")","[":"]",'{':'}'}
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack=[]
+        reference={"(":")","[":"]",'{':'}'}
 
-for i in s:
-    if(i in reference.keys()):
-        stack.append(i)
-        
-    else:
-        value=stack.pop(-1)
-        if(reference[value]==i):
-            print(i)
-            continue
+        for i in s:
+            if(i in reference.keys()):
+                stack.append(i)
+            elif(len(stack)==0):
+                return False
+
+            else:
+                value=stack.pop(-1)
+                if(reference[value]==i):
+                    
+                    continue
+                else:
+
+                    return False
+                    break
+        if(len(stack)==0):
+            return True
         else:
-            
-            values=False
-            break
-if(len(stack)==0):
-    values=True
-else:
-    values=False
+            return False
 
-print(values)
+        
