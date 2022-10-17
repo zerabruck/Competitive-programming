@@ -1,27 +1,40 @@
-people = [5,1,4,2]
+class Solution:
+    def numRescueBoats(self, people: List[int], limit: int) -> int:
+        boats=0
+        
+        
+        people.sort()
+        
+        first_val=0
 
-limit = 6
-boat=0
+        second_val=len(people)-1
+        
+        while(True):
+            if(second_val<first_val):
+                break
+            elif(second_val==first_val):
+                boats+=1
+                break
+            elif(people[first_val]+people[second_val]<=limit):
+                first_val+=1
+                second_val-=1
+                boats+=1
+            else:
+                second_val-=1
+                boats+=1
+                
+                
+        return boats
+                
+                
+                
+        
+            
+            
 
-people.sort()
-i=0
-print(people)
-while(True):
-    if(i==len(people)):
-        break
-    elif(i==len(people)-1):
-        boat+=1
-        break
+        
+        
+                
+        
 
-    elif(people[i]<limit):
-        if(people[i]+people[i+1]<=limit):
-            boat+=1
-            i+=2
-        else:
-            boat+=1
-            i+=1
-    else:
-        boat+=1
-        i+=1
-    
-print(boat)
+        

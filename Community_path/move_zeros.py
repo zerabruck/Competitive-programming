@@ -26,3 +26,4 @@ while(True):
         beg+=1
         end+=1
 print(nums)
+
