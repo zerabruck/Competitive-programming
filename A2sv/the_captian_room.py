@@ -14,3 +14,4 @@ for i in third:
 for i in dicto:
     if(dicto[i]==1):
         print(i)
+    
