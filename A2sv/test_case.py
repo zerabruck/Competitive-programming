@@ -9,14 +9,21 @@
 # print('hello')
 
 
-from collections import defaultdict
+# from collections import Counter
 
-d=defaultdict(list)
+# print(Counter("dddeeffferrrr"))
 
-d['new'].append("new")
-d['old'].append('the')
-d['new'].append('second')
+# d=defaultdict(list)
+
+# d['new'].append("new")
+# d['old'].append('the')
+# d['new'].append('second')
 
 
 
 # print(d['tht'])
+
+myfun=lambda x:len(x)
+
+x=list(map(myfun,('lkjlkj','lkl','bfrwsds')))
+print(x)
