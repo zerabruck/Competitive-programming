@@ -23,7 +23,18 @@
 
 # print(d['tht'])
 
-myfun=lambda x:len(x)
+# myfun=lambda x:len(x)
 
-x=list(map(myfun,('lkjlkj','lkl','bfrwsds')))
-print(x)
+# x=list(map(myfun,('lkjlkj','lkl','bfrwsds')))
+# print(x)
+
+# txt = "I could eat (bananas) all day"
+
+# x = txt.partition("(")
+
+# print(x)
+
+words=["flakdsjf"]
+for i in words:
+    for j in i:
+        print(j)
