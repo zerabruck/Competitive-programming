@@ -34,7 +34,16 @@
 
 # print(x)
 
-words=["flakdsjf"]
-for i in words:
-    for j in i:
-        print(j)
+# words=["flakdsjf"]
+# for i in words:
+#     for j in i:
+#         print(j)
+# from itertools import combinations 
+
+# t = [2]
+# c = list(combinations(t, 2))
+# print(len(c))
+
+array=set()
+array.add(('h',2))
+print(array)
