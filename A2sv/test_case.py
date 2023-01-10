@@ -44,6 +44,9 @@
 # c = list(combinations(t, 2))
 # print(len(c))
 
-array=set()
-array.add(('h',2))
-print(array)
+# array=set()
+# array.add(('h',2))
+# print(array)
+
+# setting = set('ll')
+# print(setting)
