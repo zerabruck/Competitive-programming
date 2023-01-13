@@ -24,16 +24,16 @@ for i in range(loop):
             inital_col = col_idx
             
 
-            while(initial_row >= 0 or inital_col >= 0):
+            while(initial_row > 0 and inital_col > 0):
                 initial_row -= 1
                 inital_col -= 1
 
-            inital_col += 1
-            initial_row += 1
+            # inital_col += 1
+            # initial_row += 1
 
-            while(initial_row < rows or inital_col < cols):
-                print (initial_row)
-                print(inital_col)
+            while(initial_row < rows and inital_col < cols):
+                # print (initial_row)
+                # print(inital_col)
                 added_val += grid [initial_row][inital_col]
                 inital_col += 1
                 initial_row += 1
@@ -41,35 +41,24 @@ for i in range(loop):
             # -------------------------up to find second diagonal------
             initial_row = row_idx
             inital_col = col_idx
-            while(initial_row >= 0 or inital_col < cols):
+            while(initial_row > 0 and  inital_col < cols):
                 initial_row -= 1
                 inital_col += 1
 
-            inital_col -= 1
-            initial_row += 1
+            # inital_col -= 1
+            # initial_row += 1
+            print(initial_row)
+            print(inital_col)
+            print('--------')
 
-            while(initial_row < rows or inital_col >= 0):
-                added_val += grid [initial_row][inital_col]
-                inital_col -= 1
-                initial_row += 1
+            # while(initial_row < rows and inital_col >= 0):
+                # print(initial_row)
+                # print(inital_col)
+                # added_val += grid [initial_row][inital_col]
+                # inital_col -= 1
+                # initial_row += 1
 
-            result = max(result,added_val)
+            # result = max(result,added_val)
 
-    print(result)
+    # print(result)
                 
-
-
-
-            
-
-
-
-
-
-            
-
-            
-
-    print(result)
-
-
