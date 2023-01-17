@@ -3,23 +3,20 @@ loop = int(input())
 for i in range(loop):
     first_side = list(map(int,input().split()))
     second_side = list(map(int,input().split()))
-    value=-1
-    indexx = []
-    for ind,col in enumerate(first_side):
-        if col in second_side:
-            indexx.append(ind)
-            indexx.append(second_side.index(col))
-            value = col
-            break
-    if value != -1:
-        first_side.pop(indexx[0])
-        second_side.pop(indexx[1])
-    summed = first_side[0] + second_side[0]
-    if value == -1:
-        print("NO")
-    elif value != summed:
-        print("NO")
+
+    max_first = max(first_side)
+    max_second = max(second_side)
+    min_first = min (first_side)
+    min_second = min(second_side)
+    summ = min_first + min_second
+
+    if max_first == max_second and max_first == summ:
+        print('YES')
+
     else:
-        print("YES")
+        print('NO')
+
+
+
    
 
