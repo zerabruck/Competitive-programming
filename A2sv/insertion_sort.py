@@ -32,6 +32,9 @@ def insertionSort1(n, arr):
             break
         if i == 0 and value < arr[i] :
             arr[1] = arr[0]
+            string = ' '.join([ str(val) for val in arr])
+            print(string)
+            
             arr[0] = value
             
             string = ' '.join([ str(val) for val in arr])
