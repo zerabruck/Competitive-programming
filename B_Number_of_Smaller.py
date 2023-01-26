@@ -1,17 +1,17 @@
 input()
 first_arr = list(map(int,input().split()))
 second_arr = list(map(int,input().split()))
+result = []
 
-sec_pointer = 0
-nums = []
+first_pointer = 0
 
-for index,value in enumerate(first_arr):
-    if value > second_arr[sec_pointer]:
-        nums.append(index + 1)
-        sec_pointer += 1
+for num in second_arr:
+    while first_pointer != len(first_arr):
+        if  num <= first_arr[first_pointer]:
+            break
 
-    
-differ = len(second_arr) - 1 - sec_pointer
+        first_pointer += 1
 
+    result.append(first_pointer)
 
-
+print(*result)
