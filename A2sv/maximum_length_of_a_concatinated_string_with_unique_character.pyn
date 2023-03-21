@@ -1,0 +1,21 @@
+class Solution:
+    def maxLength(self, arr: List[str]) -> int:
+        self.arr = arr
+        self.counter = 0
+
+        self.unique_ele("" , 0)
+        return self.counter
+
+    def unique_ele(self, visited , idx):
+        if len(self.arr) <= idx:
+            return 
+        temp = visited
+        visited += self.arr[idx]
+        o_sets = set(visited)
+
+        if len(o_sets) == len(visited):
+            self.counter = max(self.counter , len(visited))
+
+            self.unique_ele( visited , idx + 1)
+
+        self.unique_ele( temp , idx + 1)
