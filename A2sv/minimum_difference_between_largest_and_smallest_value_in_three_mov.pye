@@ -1,0 +1,9 @@
+class Solution:
+    def minDifference(self, nums: List[int]) -> int:
+        nums.sort()
+        right = nums[:4]
+        left = nums[-4:]
+        diff = inf
+        for i in range(len(right)):
+            diff = min(left[i] - right[i], diff)
+        return diff  
